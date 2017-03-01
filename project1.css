@@ -1,7 +1,12 @@
 /*CSS page for CT310 Project 1: Ingredients For You*/
 
+body, html {
+	font-family: "Dosis", sans-serif;
+	font-size: 20px;
+	height: 100%;
+}
 
-
+/* Jumbotron */
 .jumbotron {
 	background: url("jumbotron.jpg");
 	background-position: center; 
@@ -15,13 +20,37 @@
 	text-shadow: 1px 1px 2px rgba(0,0,0,.5);
 }
 
+/* Nav */
 .nav {
-	color: #ffffff;
 	background-color: #A6D49F;
 	width: 100%;
-	height: 40px;
+	height: auto;
+}
+.nav a{
+	color: #ffffff;
+	text-shadow: 1px 1px 2px rgba(0,0,0,.5);
 }
 
-.content {
+.nav .lemongrass-link>a:hover{
+	background-color: #e03c23;
+}
 
+.nav .wasabi-link>a:hover{
+	background-color: #ED9B40;
+}
+
+.nav .capers-link>a:hover, .nav .home-link>a:hover{
+	background-color: #61C9A8;
+}
+
+/* Content */
+.content {
+	background-color: #ffeedb;
+	height: 100%;
+	padding: 15px;
+}
+
+.lemongrass-sidebar {
+	background-color: #e03c23;
+	height: 100%;
 }

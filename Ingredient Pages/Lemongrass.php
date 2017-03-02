@@ -14,5 +14,8 @@
 		<div class="image"></div>
 	</div>
 	<div class="col md-2 hidden-sm hidden-xs sidebar lemongrass-sidebar"></div>
+	<?php
+		include "../Header and Footer/Project1Footer.php";
+	?>
 </body>
 </html>

@@ -5,7 +5,7 @@
 </div>
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" aria-hidden="true" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-      <i class="fa fa-bars" aria-hidden="true"></i>
+      <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
        <!-- <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>

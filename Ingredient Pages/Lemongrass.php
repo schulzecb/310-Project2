@@ -9,13 +9,11 @@
 	<div class="container-fluid lemongrass-container">
 	<div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
 	<div class="col-md-8 content">
-		<h1>Lemongrass</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique scelerisque ligula. Aenean in mattis eros, a semper magna. Proin tortor purus, gravida quis finibus sit amet, malesuada a mi. Sed pellentesque quam at vulputate pharetra. Praesent non erat faucibus, commodo turpis et, suscipit eros. Aliquam tincidunt quis enim ut porttitor. Phasellus porta sodales magna. Vivamus tellus mi, mollis vitae nunc nec, accumsan auctor tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam nec risus sodales, faucibus lacus sit amet, faucibus risus. Morbi et ornare nulla, et consectetur leo. Mauris interdum tempor velit, in feugiat ipsum commodo non.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique scelerisque ligula. Aenean in mattis eros, a semper magna. Proin tortor purus, gravida quis finibus sit amet, malesuada a mi. Sed pellentesque quam at vulputate pharetra. Praesent non erat faucibus, commodo turpis et, suscipit eros. Aliquam tincidunt quis enim ut porttitor. Phasellus porta sodales magna. Vivamus tellus mi, mollis vitae nunc nec, accumsan auctor tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam nec risus sodales, faucibus lacus sit amet, faucibus risus. Morbi et ornare nulla, et consectetur leo. Mauris interdum tempor velit, in feugiat ipsum commodo non.</p>
-
-		<div class="image"></div>
+		<div class="jumbotron lemongrass-image"><h1>Lemongrass</h1></div>
+		<p>Lemongrass is an herb with a citrus twist -- hence its name! It is often used in Asian cuisine and will give your dish a zesty kick. Lemongrass oil also has many interesting uses, such as preservative, pesticide, antifungal, medicine, and insect repellant.</p>
+		<p>We source our lemongrass directly from South Asia and Southeast Asia. Our lemongrass is of the highest quality and freshness.</p>
 		<?php
-			include "../Login/Login.php";
+			include "../Login/Message.php";
 		?>
 	</div>
 	<div class="col md-2 hidden-sm hidden-xs sidebar"></div>

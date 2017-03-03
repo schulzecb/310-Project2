@@ -27,4 +27,5 @@
 	<link rel="stylesheet" href="../project1.css">
 
 </head>
+<body>
 	

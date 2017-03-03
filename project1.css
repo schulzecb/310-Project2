@@ -6,6 +6,7 @@ body, html {
 	height: 100%;
 	padding: 0px;
 	margin: 0px;
+	background-color: #ffeedb;
 }
 
 /* Jumbotron */
@@ -58,16 +59,17 @@ body, html {
 	background-color: #A6D49F;
 	width: 100%;
 	height: 45px;
-        text-align: center;
-        color: #ffffff;
-        padding: 0px;
-        margin: 0px;
+    text-align: center;
+    color: #ffffff;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* Content */
 .container-fluid{
 	margin: 0px;
 	padding: 0px;
+	height: 100%;
 }
 
 .content {
@@ -103,3 +105,9 @@ body, html {
 
 .comment {
     font-size: 15px;
+}
+
+.signed-in{
+	font-size: 15px;
+	padding: 5px;
+}

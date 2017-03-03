@@ -88,5 +88,3 @@
     <?php
             include "../Header and Footer/Project1Footer.php";
     ?>
-
-

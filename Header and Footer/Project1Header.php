@@ -26,6 +26,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Dosis" rel="stylesheet">
 	<script src="https://use.fontawesome.com/71f0c450ac.js"></script>
 	<link rel="stylesheet" href="../project1.css">
+	<link rel="stylesheet" href="./project1.css">
 
 </head>
+<body>
 	

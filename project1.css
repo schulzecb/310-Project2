@@ -88,6 +88,10 @@ body, html {
 	background-color: #61C9A8;
 }
 
+.homepage{
+	text-align: center;
+}
+
 /* Commenting */
 .message hr{
     margin: 5px;

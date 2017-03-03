@@ -4,6 +4,8 @@ body, html {
 	font-family: "Dosis", sans-serif;
 	font-size: 20px;
 	height: 100%;
+	padding: 0px;
+	margin: 0px;
 }
 
 /* Jumbotron */
@@ -25,6 +27,8 @@ body, html {
 	background-color: #A6D49F;
 	width: 100%;
 	height: auto;
+	padding: 0px;
+	margin: 0px;
 }
 
 .glyphicon .glyphicon-menu-hamburger{
@@ -53,33 +57,35 @@ body, html {
 .footer {
 	background-color: #A6D49F;
 	width: 100%;
-	height: auto;
-        position: fixed;
-        bottom: 0px;
+	height: 45px;
         text-align: center;
         color: #ffffff;
+        padding: 0px;
+        margin: 0px;
 }
 
 /* Content */
+.container-fluid{
+	margin: 0px;
+	padding: 0px;
+}
+
 .content {
 	background-color: #ffeedb;
 	height: 100%;
 	padding: 15px;
 }
 
-.lemongrass-sidebar {
+.lemongrass-container {
 	background-color: #e03c23;
-	height: 100%;
 }
 
-.wasabi-sidebar {
+.wasabi-container {
 	background-color: #ED9B40;
-	height: 100%;
 }
 
-.capers-sidebar {
+.caperscontainer {
 	background-color: #61C9A8;
-	height: 100%;
 }
 
 /* Commenting */

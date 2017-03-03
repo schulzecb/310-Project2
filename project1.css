@@ -69,12 +69,10 @@ body, html {
 .container-fluid{
 	margin: 0px;
 	padding: 0px;
-	height: 100%;
 }
 
 .content {
 	background-color: #ffeedb;
-	height: 100%;
 	padding: 15px;
 }
 
@@ -94,6 +92,12 @@ body, html {
 	text-align: center;
 }
 
+.lemongrass-image{
+	background-image: url("./Ingredient Pages/lemongrass.jpg");
+	background-size: cover;
+	margin-bottom: 10px;
+}
+
 /* Commenting */
 .message hr{
     margin: 5px;
@@ -110,4 +114,8 @@ body, html {
 .signed-in{
 	font-size: 15px;
 	padding: 5px;
+}
+
+.form-group{
+	margin:0px;
 }

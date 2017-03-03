@@ -1,22 +1,16 @@
-<!--If signed in-->
-<hr>
-<h3>Comments</h3>
-<ul class="list-group">
-  <li class="list-group-item comment"><span class="username">Username</span> <span class="message"><br><hr>Message here</span></li>
-    <li class="list-group-item comment"><span class="username">Username</span> <span class="message"><br><hr>Message here</span></li>
-	<li class="list-group-item comment"><span class="username">Username</span> <span class="message"><br><hr>Message here</span></li>
-    <li class="list-group-item comment"><span class="username">Username</span> <span class="message"><br><hr>Message here</span></li>
-	<li class="list-group-item comment"><span class="username">Username</span> <span class="message"><br><hr>Message here</span></li>
-    <li class="list-group-item comment"><span class="username">Username</span> <span class="message"><br><hr>Message here</span></li>
+<?php  
+   $pageTitle = 'Sign In';
+   include '../Header and Footer/Project1Header.php';
+?>
 
-</ul>
-<form action="Message.php" method="post">
-	<textarea class="form-control" rows="3" placeholder="Write your comment..."></textarea>
-	<button class="btn btn-default" role="button" type="submit">Submit</button><span class="signed-in">Signed in as: username</span>
-</form>
-
+	<?php
+		include "../Header and Footer/Project1Nav.php";
+	?>
+	<div class="container-fluid wasabi-container">
+	<div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
+	<div class="col-md-8 content">
 <!--If not signed in -->
-<h3>Sign in</h3>
+<h2>Sign in</h2>
 <form action="Login.php" method="post">
 <div class="form-group">
   <input type="text" class="form-control" placeholder="Username" aria-describedby="username">
@@ -26,3 +20,11 @@
 </div>
 <button class="btn btn-default" role="button" type="submit">Sign in</button>
 </form>
+	</div>
+	<div class="col md-2 hidden-sm hidden-xs sidebar"></div>
+	</div>
+	<?php
+		include "../Header and Footer/Project1Footer.php";
+	?>
+
+

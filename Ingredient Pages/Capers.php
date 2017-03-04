@@ -3,18 +3,24 @@
    include '../Header and Footer/Project1Header.php';
 ?>
 
-<body>
+
 	<?php
 		include "../Header and Footer/Project1Nav.php";
 	?>
 	<div class="container-fluid capers-container">
 	<div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
 	<div class="col-md-8 content">
-		<h1>Capers</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique scelerisque ligula. Aenean in mattis eros, a semper magna. Proin tortor purus, gravida quis finibus sit amet, malesuada a mi. Sed pellentesque quam at vulputate pharetra. Praesent non erat faucibus, commodo turpis et, suscipit eros. Aliquam tincidunt quis enim ut porttitor. Phasellus porta sodales magna. Vivamus tellus mi, mollis vitae nunc nec, accumsan auctor tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam nec risus sodales, faucibus lacus sit amet, faucibus risus. Morbi et ornare nulla, et consectetur leo. Mauris interdum tempor velit, in feugiat ipsum commodo non.</p>
+		<div class="jumbotron capers-image"><h1>Capers</h1></div>
+		<div class="ingredient-text">
+                    <p>Capers are salted and pickled flower buds that come from the caper bush. They are commonly used as seasonings or garnish in Mediterranean cuisine, and they are sure to give any dish a tasty twist!</p>
+                    <p>After we receive caper buds come directly from our source in Morocco, we salt and pickle them in-store in order to ensure the highest quality of ingredient. Be sure to pick some up in order to amp up the caliber of your salad, pasta, meat dishes, or pasta sauce!</p><br>
+                    <div class="credit">
+                        <p>Photo Credit: James F. Carter [<a href="http://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a>], <a href="https://commons.wikimedia.org/wiki/File%3ASalted_capers.jpg">via Wikimedia Commons</a></p>
+                    </div>
+                </div>
 		<div class="image"></div>
 			<?php
-		include "../Login/Login.php";
+		include "../Login/Message.php";
 	?>
 	</div>
 	<div class="col md-2 hidden-sm hidden-xs sidebar"></div>
@@ -22,4 +28,3 @@
 	<?php
 		include "../Header and Footer/Project1Footer.php";
 	?>
-</body>

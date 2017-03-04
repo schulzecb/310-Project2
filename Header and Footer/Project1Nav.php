@@ -17,5 +17,5 @@
 		<li class="lemongrass-link"><a href="../Ingredient Pages/Lemongrass.php">Lemongrass</a></li>
 		<li class="wasabi-link" ><a href="../Ingredient Pages/Wasabi.php">Wasabi</a></li>
 		<li class="capers-link"><a href="../Ingredient Pages/Capers.php">Capers</a></li>
-		<li class="lemongrass-link"><a href="../about.php">About Us</a></li>
+		<li class="lemongrass-link"><a href="../AboutUs/about.php">About Us</a></li>
 	</ul>

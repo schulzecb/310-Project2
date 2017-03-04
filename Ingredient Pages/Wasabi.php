@@ -3,18 +3,24 @@
    include '../Header and Footer/Project1Header.php';
 ?>
 
-<body>
+
 	<?php
 		include "../Header and Footer/Project1Nav.php";
 	?>
 	<div class="container-fluid wasabi-container">
 	<div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
 	<div class="col-md-8 content">
-		<h1>Wasabi</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique scelerisque ligula. Aenean in mattis eros, a semper magna. Proin tortor purus, gravida quis finibus sit amet, malesuada a mi. Sed pellentesque quam at vulputate pharetra. Praesent non erat faucibus, commodo turpis et, suscipit eros. Aliquam tincidunt quis enim ut porttitor. Phasellus porta sodales magna. Vivamus tellus mi, mollis vitae nunc nec, accumsan auctor tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam nec risus sodales, faucibus lacus sit amet, faucibus risus. Morbi et ornare nulla, et consectetur leo. Mauris interdum tempor velit, in feugiat ipsum commodo non.</p>
+		<div class="jumbotron wasabi-image"><h1>Wasabi</h1></div>
+		<div class="ingredient-text">
+                    <p>Wasabi - also known as Japanese horseradish - is a plant that grows naturally along stream beds in mountain river valleys in Japan. It is part of the <i>Brassicaceae</i> plant family, which also includes horseradish, mustard, and cabbages. Most people know and love wasabi for its intense and sinus-clearing spicy taste.</p>
+                    <p>We get our wasabi from Japan's Izu peninsula, and we grind it into paste in-store! Having some sushi or another Asian dish for dinner? You won't want to skip the wasabi, trust us!</p><br>
+                    <div class="credit">
+                        <p>Photo credit: Sabigirl at English Wikipedia, <a href="https://commons.wikimedia.org/wiki/File%3AFresh_wasabi_rhizomes.jpg">via Wikimedia Commons</a></p>
+                    </div>
+                </div>
 		<div class="image"></div>
 			<?php
-		include "../Login/Login.php";
+		include "../Login/Message.php";
 	?>
 	</div>
 	<div class="col md-2 hidden-sm hidden-xs sidebar"></div>
@@ -22,4 +28,3 @@
 	<?php
 		include "../Header and Footer/Project1Footer.php";
 	?>
-</body>

@@ -1,10 +1,10 @@
 <?php  
    $pageTitle = 'Home';
-   include './Header and Footer/Project1Header.php';
+   include '../Header and Footer/Project1Header.php';
 ?>
 
 	<?php
-		include "./Header and Footer/Project1Nav.php";
+		include "../Header and Footer/Project1Nav.php";
 	?>
 	<div class="container-fluid">
 	<h1 class="homepage">Welcome to Ingredients For You!</h1>
@@ -16,5 +16,5 @@
 	<div class="col-md-4">test2</div>
 	</div>
 	<?php
-		include "./Header and Footer/Project1Footer.php";
+		include "../Header and Footer/Project1Footer.php";
 	?>

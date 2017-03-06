@@ -2,6 +2,7 @@
 <?php session_start(); ?>
 
 <?php  
+
     $pageTitle = 'Sign In';
     include '../Header and Footer/Project1Header.php';
 ?>
@@ -81,7 +82,6 @@
         <div class="logout"><p><a href="Logout.php">Logout</a></p></div>
     <?php endif; ?>
 </div>
-
 
 <div class="col md-2 hidden-sm hidden-xs sidebar"></div>
 </div>

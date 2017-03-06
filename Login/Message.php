@@ -1,3 +1,4 @@
+<div class="commenting">
 <?php if (!isset($_SESSION['username'])) : ?>
 	<p><a href="../Login/Login.php">Sign in</a> to comment</p>
 <?php else: ?>
@@ -48,3 +49,4 @@
 		<?php echo '<button class="btn btn-default" role="button" type="submit" name="submit">Submit</button><span class="signed-in">Signed in as: ' . $_SESSION['username'] . '</span>' ?>
 	</form>
 <?php endif; ?>
+</div>

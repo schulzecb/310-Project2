@@ -43,6 +43,18 @@
                 echo $date . "\n";
             }
     }
+    elseif ($usernm == "kdmnance"){
+            $hash = md5($_POST['pwd']);
+            if ($hash == "67d6ff28e7bec383dfd972e89965f62f") {
+                $loginSuccess = true;
+                $_SESSION['username'] = $usernm;
+                $_SESSION['loginTime'] = $date;
+            }
+            else {
+               echo "Login Failure: Wrong password for: " . $usernm . '<br>';
+                echo $date . "\n";
+            }
+    }
     else {
         echo "Login Failure: Wrong username<br />";
         echo $date . "\n";

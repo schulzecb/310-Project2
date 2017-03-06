@@ -78,7 +78,7 @@
             <?php 
                 echo '<p>' . "You are currently signed in as '" . $_SESSION['username'] . "'" . '</p>';
             ?>
-            <div class="logout"><p><a href="Logout.php">Logout</a></p></div>
+            <div class="content-links"><p><a href="Logout.php">Logout</a></p></div>
         <?php endif; ?>
     </div>
     

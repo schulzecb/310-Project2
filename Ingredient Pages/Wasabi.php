@@ -3,6 +3,7 @@
 
 <?php  
    $pageTitle = 'Wasabi';
+   $wasabiComments = 0;
    include '../Header and Footer/Project1Header.php';
 ?>
 
@@ -22,14 +23,9 @@
                     </div>
                 </div>
 		<div class="image"></div>
-            <?php 
-                if (isset ($_SESSION['username'])) {
+                <?php
                     include "../Login/Message.php";
-		}
-		else {
-                    echo "You must be signed in to view comments.";
-		}
-            ?>
+                ?>
 	</div>
 	<div class="col md-2 hidden-sm hidden-xs sidebar"></div>
 	</div>

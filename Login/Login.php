@@ -63,6 +63,7 @@
 ?>
         
 <?php if ($loginSuccess) {
+       $_SESSION['messages'] = array();
     header("Location: ./Login.php");
 }
 ?>

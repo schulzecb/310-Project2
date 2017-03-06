@@ -1,3 +1,6 @@
+<?php session_name("310proj1"); ?>
+<?php session_start(); ?>
+
 <?php  
    $pageTitle = 'Wasabi';
    include '../Header and Footer/Project1Header.php';
@@ -19,9 +22,14 @@
                     </div>
                 </div>
 		<div class="image"></div>
-			<?php
-		include "../Login/Message.php";
-	?>
+            <?php 
+                if (isset ($_SESSION['username'])) {
+                    include "../Login/Message.php";
+		}
+		else {
+                    echo "You must be signed in to view comments.";
+		}
+            ?>
 	</div>
 	<div class="col md-2 hidden-sm hidden-xs sidebar"></div>
 	</div>

@@ -69,11 +69,11 @@ a:hover {
         margin: 0px;
 }
 
-.logout a {
+.content-links a {
     text-decoration: none;
 }
 
-.logout a:hover {
+.content-links a:hover {
     text-decoration: none;
     color: #e03c23;
 }

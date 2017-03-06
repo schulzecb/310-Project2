@@ -1,3 +1,6 @@
+<?php session_name("310proj1"); ?>
+<?php session_start(); ?>
+
 <?php  
    $pageTitle = 'Lemongrass';
    include '../Header and Footer/Project1Header.php';
@@ -18,8 +21,10 @@
                     </div>
                 </div>
 		<?php
+			$index = 1;
 			include "../Login/Message.php";
 		?>
+
 	</div>
 	<div class="col md-2 hidden-sm hidden-xs sidebar"></div>
 	</div>

@@ -1,3 +1,6 @@
+<?php session_name("310proj1"); ?>
+<?php session_start(); ?>
+
 <?php  
    $pageTitle = 'Capers';
    include '../Header and Footer/Project1Header.php';

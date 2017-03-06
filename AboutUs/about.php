@@ -14,7 +14,7 @@
                     <h1>Katie</h1><br>
                     <a href="https://www.cs.colostate.edu/~kdmnance"><img class = "img-aboutus center-block" src="./katie.jpg" alt="Katie Picture"></a><br>
                     <div class="about-text katie-text">
-                        <p>Katie Nance is a junior at Colorado State Univeristy studying Applied Computing Technology. As far as Courtney can tell, Katie is a delightful human being. :)</p>
+                        <p>Katie Nance is a senior at Colorado State Univeristy studying Applied Computing Technology. She likes playing guitar, drawing, swimming, and reading.</p>
                     </div>
                 </div>
             

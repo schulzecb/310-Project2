@@ -15,7 +15,7 @@
 <?php $date = date('m/d/Y h:i:s a', time()); ?>
 <?php $loginSuccess = false ?>
 <?php if (isset($_POST['user']) && isset($_POST['pwd'])) {
-    $usernm = $_POST['user']; 
+    $usernm = filter_var($_POST['user'], FILTER_SANITIZE_STRING); 
     
     //Credentials #1: ct310
     if ($usernm == "ct310"){

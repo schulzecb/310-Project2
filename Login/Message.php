@@ -9,7 +9,7 @@
 				if (isset($_POST['submit'])){
 					$content = array(
 						"username" => $_SESSION['username'],
-						"message" => $_POST['message'],
+						"message" => filter_var($_POST['message'], FILTER_SANITIZE_STRING),
 					);
 					$_SESSION["wasabi-messages"][] = $content;
 				}
@@ -21,7 +21,7 @@
 				if (isset($_POST['submit'])){
 					$content = array(
 						"username" => $_SESSION['username'],
-						"message" => $_POST['message'],
+						"message" => filter_var($_POST['message'], FILTER_SANITIZE_STRING),
 					);
 					$_SESSION["lemongrass-messages"][] = $content;
 				}
@@ -33,7 +33,7 @@
 				if (isset($_POST['submit'])){
 					$content = array(
 						"username" => $_SESSION['username'],
-						"message" => $_POST['message'],
+						"message" => filter_var($_POST['message'], FILTER_SANITIZE_STRING),
 					);
 					$_SESSION["capers-messages"][] = $content;
 				}

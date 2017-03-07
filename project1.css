@@ -97,8 +97,6 @@ a:hover {
 	padding: 15px;
 }
 
-
-
 .lemongrass-container {
 	background-color: #e03c23;
 }
@@ -147,6 +145,8 @@ a:hover {
 .credit a:hover{
     color: #e03c23;
 }
+
+/* About Us */
 
 .about-us {
         padding: 15px;
@@ -199,4 +199,13 @@ a:hover {
 
 .form-group{
 	margin:0px;
+}
+
+.commenting {
+	margin: 30px;
+}
+
+/* Homepage */
+.homepage-images{
+	padding: 30px;
 }

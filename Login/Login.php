@@ -20,7 +20,7 @@
     //Credentials #1: ct310
     if ($usernm == "ct310"){
         $hash = md5($_POST['pwd']);
-        if ($hash == "48f2f942692b08ec9de1ef9ada5230a3") {
+        if ($hash == "3aaec86181ee6974b99d893b4c1eb5b5") {
             $loginSuccess = true;
             $_SESSION['username'] = $usernm;
             $_SESSION['loginTime'] = $date;
@@ -43,6 +43,8 @@
                 echo $date . "\n";
             }
     }
+    
+    //Credentials #3: Katie
     elseif ($usernm == "kdmnance"){
             $hash = md5($_POST['pwd']);
             if ($hash == "67d6ff28e7bec383dfd972e89965f62f") {

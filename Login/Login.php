@@ -11,6 +11,13 @@
         include "../Header and Footer/Project1Nav.php";
 ?>
 
+
+
+
+<div class="container-fluid wasabi-container">
+<div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
+<div class="col-md-8 content">
+
 <!-- Authentication section -->
 <?php $date = date('m/d/Y h:i:s a', time()); ?>
 <?php $loginSuccess = false ?>
@@ -26,7 +33,7 @@
             $_SESSION['loginTime'] = $date;
         }
         else {
-            echo "Login Failure: Wrong password for: " . $usernm . '<br>';
+            echo '<font color=red>' . "Login Failure:" . '</font>' . " Wrong password for: " . $usernm . '<br>';
             echo $date . "\n";
         }
     }
@@ -39,7 +46,7 @@
                 $_SESSION['loginTime'] = $date;
             }
             else {
-               echo "Login Failure: Wrong password for: " . $usernm . '<br>';
+               echo '<font color=red>' . "Login Failure:" . '</font>' . " Wrong password for: " . $usernm . '<br>';
                 echo $date . "\n";
             }
     }
@@ -53,12 +60,12 @@
                 $_SESSION['loginTime'] = $date;
             }
             else {
-               echo "Login Failure: Wrong password for: " . $usernm . '<br>';
+               echo '<font color=red>' . "Login Failure:" . '</font>' . " Wrong password for: " . $usernm . '<br>';
                 echo $date . "\n";
             }
     }
     else {
-        echo "Login Failure: Wrong username<br />";
+        echo '<font color=red>' . "Login Failure:" . '</font>' . " Wrong username<br />";
         echo $date . "\n";
     }
 }
@@ -72,11 +79,6 @@
 }
 ?>
 <!-- End authentication section -->
-
-
-<div class="container-fluid wasabi-container">
-<div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
-<div class="col-md-8 content">
 
     <!--If not signed in -->
     <?php if (!isset($_SESSION['username'])) : ?>

@@ -1,12 +1,7 @@
-# 310-Project1
+# 310-Project2
 Ingredients For You (IFY)
 
 <p>Goal: Create a food products website to showcase 3 different ingredients.</p>
-
-<p><b>Page Breakup:</b></p>
-<ul><li>Courtney: Two ingredient pages, about us page</li>
-<li>Katie: Homepage, an ingredient page, authentication page</li></ul>
-
 
 <p><b>Color scheme:</b> https://coolors.co/e03c23-a6d49f-ed9b40-ffeedb-61c9a8</p>
 <ul><li>CG Red: #e03c23 -> accent</li>

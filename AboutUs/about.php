@@ -11,10 +11,10 @@
 	<div class="container-fluid about-us">
             <div class="row-md-8">
                 <div class="col-md-6 katie-about">
-                    <h1>Katie</h1><br>
-                    <a href="https://www.cs.colostate.edu/~kdmnance"><img class = "img-aboutus center-block" src="./katie.jpg" alt="Katie Picture"></a><br>
+                    <h1>Jake</h1><br>
+                    <a href="https://www.cs.colostate.edu/~jcollera/"><img class = "img-aboutus center-block" alt="Jake Picture"></a><br>
                     <div class="about-text katie-text">
-                        <p>Katie Nance is a senior at Colorado State Univeristy studying Applied Computing Technology. She likes playing guitar, drawing, swimming, and reading.</p>
+                        <p>Things about Jake are gonna go here.</p>
                     </div>
                 </div>
             

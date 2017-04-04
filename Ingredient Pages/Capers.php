@@ -1,14 +1,13 @@
-<?php session_name("310proj1"); ?>
-<?php session_start(); ?>
 
 <?php  
    $pageTitle = 'Capers';
-   include '../Header and Footer/Project1Header.php';
+   include '../Login/Control.php';
+   include '../Header and Footer/Header.php';
 ?>
 
 
 	<?php
-		include "../Header and Footer/Project1Nav.php";
+		include "../Header and Footer/Nav.php";
 	?>
 	<div class="container-fluid capers-container">
 	<div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
@@ -29,5 +28,5 @@
 	<div class="col md-2 hidden-sm hidden-xs sidebar"></div>
 	</div>
 	<?php
-		include "../Header and Footer/Project1Footer.php";
+		include "../Header and Footer/Footer.php";
 	?>

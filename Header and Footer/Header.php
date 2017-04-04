@@ -11,9 +11,9 @@
 	<?php echo "<title> Ingredients For You: $pageTitle </title>\n" ?>
 	
 	<!-- Add appropriate required meta tags needed for the responsive webpage using bootstrap -->
-	<meta name="author" content="Courtney Schulze and Katie Nance">
-	<meta name="description" content="Project 1: Ingredients For You">
-	<meta name="keywords" content="Courtney Schulze, Katie Nance, CSU, Colorado State University, CT310, Project 1">
+	<meta name="author" content="Courtney Schulze and Jake Colleran">
+	<meta name="description" content="Project 2: Ingredients For You">
+	<meta name="keywords" content="Courtney Schulze, Jake Colleran, CSU, Colorado State University, CT310, Project 2">
 	
 	<!-- Add required bootstrap CDN links for style sheet and required scripts -->
 		
@@ -24,7 +24,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Dosis" rel="stylesheet">
-	<link rel="stylesheet" href="../project1.css">
+	<link rel="stylesheet" href="../project.css">
 
 </head>
 <body>

@@ -1,6 +1,5 @@
 <?php 
-    session_name("310proj1");
-    session_start(); 
+    include './Control.php';
     // remove all session variables
     session_unset();
 

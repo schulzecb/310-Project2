@@ -55,6 +55,8 @@
                 <input type="password" class="form-control" placeholder="Password" aria-describedby="pass" name="pwd">
             </div>
             <button class="btn btn-default" role="button" type="submit">Sign in</button>
+            </br>
+            <p> forgot my  <a href="./FMP.php">Password</a> </p>
         </form>
     
     <!--Direct them to log out if they are signed in -->

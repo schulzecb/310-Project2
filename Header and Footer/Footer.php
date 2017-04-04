@@ -1,7 +1,7 @@
 <div class="footer">
 <p><?php 
-    if (isset($_SESSION["username"])){
-        echo 'Signed in as <a href="../Login/Login.php">' . $_SESSION["username"] . '</a> | ';
+    if (isset($_SESSION["userName"])){
+        echo 'Signed in as <a href="../Login/Login.php">' . $_SESSION["userName"] . '</a> | ';
     }
     else {
         echo '<a href="../Login/Login.php">Sign in</a> | ';

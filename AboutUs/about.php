@@ -1,11 +1,11 @@
 <?php  
    $pageTitle = 'About Us';
-   include '../Header and Footer/Project1Header.php';
+   include '../Header and Footer/Header.php';
 ?>
 
 
 	<?php
-		include "../Header and Footer/Project1Nav.php";
+		include "../Header and Footer/Nav.php";
 	?>
 	
 	<div class="container-fluid about-us">
@@ -31,5 +31,5 @@
 	</div>
 	
 	<?php
-		include "../Header and Footer/Project1Footer.php";
+		include "../Header and Footer/Footer.php";
 	?>

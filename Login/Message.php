@@ -6,42 +6,11 @@
 	<h3>Comments</h3>
 	<ul class="list-group">
 		<?php 
-			if ($pageTitle == "Wasabi"){
-				if (isset($_POST['submit'])){
-					$content = array(
-						"userName" => $_SESSION['userName'],
-						"message" => filter_var($_POST['message'], FILTER_SANITIZE_STRING),
-					);
-					$_SESSION["wasabi-messages"][] = $content;
-				}
-				foreach ($_SESSION["wasabi-messages"] as $content){
-					echo '<li class="list-group-item comment"><span class="username">' . $content["userName"] . '</span> <span class="message"><br><hr>' . $content["message"] . '</span></li>';
-				}
-			}
-			elseif ($pageTitle == "Lemongrass"){
-				if (isset($_POST['submit'])){
-					$content = array(
-						"userName" => $_SESSION['userName'],
-						"message" => filter_var($_POST['message'], FILTER_SANITIZE_STRING),
-					);
-					$_SESSION["lemongrass-messages"][] = $content;
-				}
-				foreach ($_SESSION["lemongrass-messages"] as $content){
-					echo '<li class="list-group-item comment"><span class="username">' . $content["userName"] . '</span> <span class="message"><br><hr>' . $content["message"] . '</span></li>';
-				}
-			}
-			else{
-				if (isset($_POST['submit'])){
-					$content = array(
-						"userName" => $_SESSION['userName'],
-						"message" => filter_var($_POST['message'], FILTER_SANITIZE_STRING),
-					);
-					$_SESSION["capers-messages"][] = $content;
-				}
-				foreach ($_SESSION["capers-messages"] as $content){
-					echo '<li class="list-group-item comment"><span class="username">' . $content["userName"] . '</span> <span class="message"><br><hr>' . $content["message"] . '</span></li>';
-				}
-			}
+			$page_comments = $db->retrieveComments($ingredient["ingredient_id"]);
+			
+			if (count($page_comments) <= 1) {
+                            echo "No comments to show";
+                        }
 		?>
 	</ul>
 	<form action="#" method="post">

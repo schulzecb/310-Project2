@@ -33,5 +33,12 @@ class Database extends PDO {
                 return $result->fetch();
 	}
 	
+	function retrieveComments($ing_id) {
+	
+                $sql = "SELECT * FROM comments NATURAL JOIN ingredient WHERE ingredient_id = '$ing_id'";
+                $result = $this->query( $sql );
+                return $result->fetch();
+	}
+	
 	
 }

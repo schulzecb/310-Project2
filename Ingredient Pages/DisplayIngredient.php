@@ -24,9 +24,11 @@
             <div class="ingredient-text">
                 <p><?php echo $ingredient["description"];?></p><br>
             </div>
+            <?php include "../Login/Message.php"; ?>
         </div>
         <div class="col md-2 hidden-sm hidden-xs sidebar"></div>
     </div>
 
+    
 
 <?php include '../Header and Footer/Footer.php';

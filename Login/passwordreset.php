@@ -42,7 +42,7 @@
             }
         }
     }
-include "../Header and Footer/Footer.php";
+include "../Header and Footer/Header.php";
 
 ?>
 <?php

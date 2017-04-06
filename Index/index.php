@@ -1,4 +1,5 @@
 <?php  
+    include '../Login/Control.php';
    $pageTitle = 'Home';
    include_once '../Ingredient Pages/Create.php';
    include '../Header and Footer/Header.php';
@@ -11,13 +12,28 @@
 	<h1 class="homepage">Welcome to Ingredients For You!</h1>
 	<p class="homepage">We offer the freshest ingredients for your gourmet cooking. Sourced from small farms and prepared in store, our ingredients can't be beat!</p>
 	</div>
-	<div class="row homepage homepage-images">
-	<div class="col-md-4">
-		<a href="../Ingredient Pages/Lemongrass.php"><div class="jumbotron lemongrass-image"><h1>Lemongrass</h1></div></a>
-	</div>
-	<div class="col-md-4"><a href="../Ingredient Pages/Wasabi.php"><div class="jumbotron wasabi-image"><h1>Wasabi</h1></div></a></div>
-	<div class="col-md-4"><a href="../Ingredient Pages/Capers.php"><div class="jumbotron capers-image"><h1>Capers</h1></div></a></div>
-	</div>
+	
+	
+        <?php
+            //display ingredients in database
+            require_once '../lib/Database.php';
+            $db = new Database();
+            $ingredients = $db->getIngredients();
+            
+            foreach($ingredients as $ing) { ?>
+                <div class="row" style="text-align: center; padding: 10px; margin-bottom: 2px;">
+                    <div class="col-xs-12">
+                    <h3>
+                       <?php echo "<a href= 'https://www.cs.colostate.edu/~cschulze/310-Project2/310-Project2/Ingredient Pages/DisplayIngredient.php?ing=" . $ing["ingredient_name"] . "'>"; ?>
+                       <?php echo $ing["ingredient_name"];?>
+                       </a>
+                    </h3>
+                        <img style="height: 200px; width: 200px; margin-bottom: 5px;" alt="<?php echo $ing["ingredient_name"];?>" />
+                    </div>
+		</div>
+            <?php }; ?>	
+            
+	
 	<?php
 		include "../Header and Footer/Footer.php";
 	?>

@@ -14,8 +14,6 @@
     </div>
 	<ul class="nav nav-pills nav-justified collapse navbar-collapse" id="navbar">
 		<li class="home-link"><a href="../Index/index.php">Home</a></li>
-		<li class="lemongrass-link"><a href="../Ingredient Pages/Lemongrass.php">Lemongrass</a></li>
-		<li class="wasabi-link" ><a href="../Ingredient Pages/Wasabi.php">Wasabi</a></li>
-		<li class="capers-link"><a href="../Ingredient Pages/Capers.php">Capers</a></li>
+		
 		<li class="lemongrass-link"><a href="../AboutUs/about.php">About Us</a></li>
 	</ul>

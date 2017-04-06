@@ -11,8 +11,5 @@ if (! isset ( $_SESSION ['startTime'] )) {
 if (! isset ( $_SESSION ['userName'] )) {
 	$_SESSION ['userName'] = "Guest";
 }
-if (!$loginPage && ($_SESSION ['userName'] == "Guest")) {
- 	header ( "Location: https://$host$uri/Login.php" );
-	exit ();
-}
+
 ?>

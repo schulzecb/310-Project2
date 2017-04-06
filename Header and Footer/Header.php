@@ -1,5 +1,4 @@
 
-
 <?php  echo '<?xml version="1.0" encoding="utf-8"?>' ?>
 <?php  echo "\n"?>
 <?php  echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 

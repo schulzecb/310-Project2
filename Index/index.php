@@ -1,5 +1,6 @@
 <?php  
    $pageTitle = 'Home';
+   include_once '../Ingredient Pages/Create.php';
    include '../Header and Footer/Header.php';
 ?>
 

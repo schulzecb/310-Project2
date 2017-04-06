@@ -1,5 +1,5 @@
 <div class="commenting">
-<?php if (!isset($_SESSION['userName'])) : ?>
+<?php if (!isset($_SESSION['userName']) || ($_SESSION['userName'] == "Guest")) : ?>
 	<p><a href="../Login/Login.php">Sign in</a> to comment</p>
 <?php else: ?>
 	<hr>

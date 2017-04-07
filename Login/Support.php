@@ -60,4 +60,13 @@ function userHashByName($users, $uname) {
 	}
 	return $res;
 }
+
+function isAdmin($user) {
+    if($user->type == "admin") {
+        return true;
+    }
+    
+    return false;
+
+}
 ?>

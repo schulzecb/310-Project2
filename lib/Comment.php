@@ -11,6 +11,7 @@ class Comment{
     
     public static function getCommentFromRow($row) {
         $comment = new Comment();
+        $comment->comment_id = $row['comment_id'];
         $comment->comment_text = $row['comment_text'];
         $comment->user = $row['user'];
         $comment->timestamp = $row['timestamp'];

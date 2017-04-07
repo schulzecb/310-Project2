@@ -31,9 +31,7 @@
 
 
 <?php if ($loginSuccess) {
-       $_SESSION['wasabi-messages'] = array();
-       $_SESSION['lemongrass-messages'] = array();
-       $_SESSION['capers-messages'] = array();
+    
     header("Location: ./Login.php");
 }
 ?>

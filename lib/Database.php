@@ -46,6 +46,19 @@ class Database extends PDO {
                 return $comments;
 	}
 	
+	function deleteComment($comment) {
+            
+            $sql = "DELETE FROM comments WHERE comment_id == '$comment'";
+            if ($this->exec ( $sql ) === FALSE) {
+			echo '<pre class="bg-danger">';
+			print_r ( $this->errorInfo () );
+			echo '</pre>';
+			return FALSE;
+		}
+		return TRUE;
+	
+	}
+	
 	function getNextCommentID() {
                 $sql = "SELECT count(*) FROM comments";
                 $result = $this->query($sql);

@@ -3,7 +3,17 @@
     $pageTitle = 'Sign In';
     include './Control.php';
     include './Support.php';
+    include '../Header and Footer/Header.php';
 ?>
+
+
+<?php
+    include "../Header and Footer/Nav.php";
+?>
+<div class="container-fluid wasabi-container">
+<div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
+<div class="col-md-8 content">
+
 <?php
 $valid = false;
     $uname = '';
@@ -19,7 +29,7 @@ $valid = false;
                     $key = "abcdefghijklmnopqrstuvwxyz1234567890";
                     $_SESSION['Key1'] = str_shuffle($key);
                     $_SESSION['user'] = $uname;
-                    $keyS =  "https://www.cs.colostate.edu/~jcollera/310-Project2-master/Login/passwordreset.php?key=" . $_SESSION['Key1'];
+                    $keyS =  "https://$host$uri/passwordreset.php?key=" . $_SESSION['Key1'];
                     mail($email,"Password Reset", $keyS);
                     echo "An email has been sent to " ;
                     echo $email;
@@ -32,23 +42,15 @@ $valid = false;
         }
     }
 
-include '../Header and Footer/Header.php';
 
 ?>
-
-<?php
-    include "../Header and Footer/Nav.php";
-?>
-<div class="container-fluid wasabi-container">
-<div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
-<div class="col-md-8 content">
 
 <form action="FMP.php" method="post">
     <p>
         UserName: 
                 <input type="text" name="name" placeholder="Username"><br/>
                 <br/>
-                <input type="submit" name="login" value="generate email">
+                <input type="submit" name="login" value="Generate Email">
             </select>
     </p>
 </form>

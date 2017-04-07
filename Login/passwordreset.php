@@ -23,26 +23,26 @@
              
                 while(($data = fgetcsv($handle)) !== FALSE){
                     if($data[0] == $uname){
-                    //echo "fdff";
+                    
                         $email = $data[2];
                         $phash = password_hash($pword);
                         $delete = $uname . "," . $data[1] . "," . $email;
                         $line_of_text = $uname . "," . $phash . "," . $email; 
                         
-                       //echo str_replace($delete,$line_of_text,file_get_contents("users.csv"));
+                       
                        $replace = str_replace($delete,$line_of_text,file_get_contents("users.csv"));
-                        echo "dsaf";
+                       
                       
                             file_put_contents("users.csv", $replace);
                             $_POST['Pass'] = "";
-                           // header ( "Location: Login.php" );
+                           
                                             
                     }  
                 }            
             }
         }
     }
-include "../Header and Footer/Footer.php";
+include "../Header and Footer/Header.php";
 
 ?>
 <?php
@@ -66,7 +66,7 @@ include "../Header and Footer/Footer.php";
         Information:     <br/>   
                 <input type="password" name="Pass" placeholder="Password"><br/>
                 <input type="password" name="Pass2" placeholder="Confirm Password"><br/>
-                <input type="submit" name="rest" value="reset password">
+                <input type="submit" name="rest" value="Reset Password">
             </select>
     </p>
 </form>

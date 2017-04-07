@@ -16,12 +16,38 @@
     
     }
     
-    //check to make sure user is admin
-    if(!isAdmin($user)) {
-        echo "You must be an admin to modify this comment";
+   //check to make sure user is admin
+    if(!isAdmin($user)) { ?>
+        <div class="container-fluid wasabi-container">
+            <div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
+            <div class="col-md-8 content">
+                <p>You must be an admin to modify comments!</p>
+            </div>
+            <div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
+        </div>
+            
+    <?php 
     }
     else {
-        echo "You are an admin!";
+        if (isset($_GET['id'])) {
+        
+            require_once '../lib/Database.php';
+            $db = new Database();
+            $db->deleteComment($_GET['id']); 
+            $prevPage = $_SESSION['ingURL'];?>
+            
+           <div class="container-fluid wasabi-container">
+            <div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
+            <div class="col-md-8 content">
+                <p>Comment has been deleted</p>
+                <p><a href= <?php echo "$prevPage"?> >Go Back</a></p>
+            </div>
+            <div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
+        </div>
+            
+    <?php 
+        
+        }
     }
     
 ?>

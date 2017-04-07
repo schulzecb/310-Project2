@@ -1,5 +1,6 @@
 <?php  
     include '../Login/Control.php';
+    require_once '../lib/Comment.php';
     $pageTitle = 'display';
     include '../Header and Footer/Header.php';
     include '../Header and Footer/Nav.php';

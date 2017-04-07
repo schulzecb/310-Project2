@@ -35,9 +35,36 @@ class Database extends PDO {
 	
 	function retrieveComments($ing_id) {
 	
-                $sql = "SELECT * FROM comments NATURAL JOIN ingredient WHERE ingredient_id = '$ing_id'";
+                $sql = "SELECT * FROM comments WHERE ingredient_id = '$ing_id'";
                 $result = $this->query( $sql );
-                return $result->fetch();
+                
+                $comments = array();
+                foreach($result as $row) {
+                    $comments[] = Comment::getCommentFromRow( $row );
+                }
+                
+                return $comments;
+	}
+	
+	function getNextCommentID() {
+                $sql = "SELECT count(*) FROM comments";
+                $result = $this->query($sql);
+                return $result->fetchColumn() + 1;
+	}
+	
+	function insertComment($newComment) {
+                $sql = "INSERT INTO comments (comment_text, user, timestamp, ip_addr, ingredient_id)
+                        VALUES(:text, :user, :time, :ip, :ing_id)";
+                $stm = $this->prepare( $sql );
+                return $stm->execute( array (
+                                        ":text" => $newComment->comment_text,
+                                        ":user" => $newComment->user,
+                                        ":time" => $newComment->timestamp,
+                                        ":ip" => $newComment->ip_addr,
+                                        ":ing_id" => $newComment->ingredient_id
+                ) );
+	
+	
 	}
 	
 	

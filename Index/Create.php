@@ -13,13 +13,21 @@ $pageTitle = "Create";
 
     <?php if (!$dbh = setupIngredientConnection()) { die; } ?>
 				
-    <?php dropTableByName ( "ingredient" );
-    dropTableByName ( "comments" ); ?>
+    <?php //dropTableByName ( "ingredient" );
+    //dropTableByName ( "comments" ); ?>
             
-    <?php createTableIngredient ();
+    <?php
+    //will create tables if they don't exist
+    createTableIngredient ();
     createTableComments (); ?>
 					
-    <?php loadIngredientsIntoEmptyDatabase (); ?>
+    <?php 
+    //load default ingredients into table if emtpy
+    $sql_empty = "SELECT count(*) FROM ingredient";
+    $result = $dbh->query($sql_empty);
+    if($result->fetchColumn() == 0) {
+        loadIngredientsIntoEmptyDatabase (); 
+    } ?>
 				
 
 </main>
@@ -47,7 +55,7 @@ function dropTableByName($tname) {
 	} 
 }
 function createTableComments() {
-	$sql = "CREATE TABLE comments (
+	$sql = "CREATE TABLE IF NOT EXISTS comments (
             comment_id INTEGER PRIMARY KEY ASC,
             comment_text varchar(255),
             user varchar(50),
@@ -59,7 +67,7 @@ function createTableComments() {
 }
 
 function createTableIngredient() {
-	$sql = "CREATE TABLE ingredient (
+	$sql = "CREATE TABLE IF NOT EXISTS ingredient (
 			   ingredient_id INTEGER PRIMARY KEY ASC, 
 			   ingredient_name varchar(50), 
 			   image varchar(50), 

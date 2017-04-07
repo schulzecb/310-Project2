@@ -1,7 +1,7 @@
 <?php  
     include '../Login/Control.php';
    $pageTitle = 'Home';
-   include_once '../Ingredient Pages/Create.php';
+   include_once './Create.php';
    include '../Header and Footer/Header.php';
 ?>
 

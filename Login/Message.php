@@ -33,10 +33,10 @@
                         else {
                             foreach($page_comments as $comment) { ?>
                             <li class="list-group-item comment">
-                                <?php echo '<span class="username">' . $comment->user . '</span>';?>  
                                 <?php $id = $comment->comment_id; ?>
                                 <a class="btn default-btn" href="<?php echo "../Login/modify.php?id=$id"?>"> <span class="glyphicon glyphicon-pencil" aria-label="Edit"></span> </a>
                                 <a class="btn default-btn" href="<?php echo "../Login/delete.php?id=$id"?>"> <span class="glyphicon glyphicon-remove" aria-label="Delete"></span> </a>
+                                <?php echo '<span class="username">' . $comment->user . '</span>';?>  
                                 <?php echo '<span class="message"><br><hr>' . $comment->comment_text . '</span></li>';
                             }
                         }

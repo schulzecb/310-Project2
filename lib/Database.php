@@ -1,4 +1,5 @@
 <?php
+require_once("Comment.php");
 
 class Database extends PDO {
 	public function __construct() {
@@ -76,6 +77,31 @@ class Database extends PDO {
                                         ":ip" => $newComment->ip_addr,
                                         ":ing_id" => $newComment->ingredient_id
                 ) );
+	
+	
+	}
+	
+	function getCommentDetails($com_id) {
+            
+            $sql = "SELECT * FROM comments WHERE comment_id == '$com_id'";
+            $result = $this->query($sql);
+            
+            return Comment::getCommentFromRow($result->fetch());
+	
+	}
+	
+	function modifyComment($newCom) {
+            
+            
+            $sql = "UPDATE comments SET comment_text = :text, user = :user WHERE comment_id == :id";
+            
+            $stm = $this->prepare ( $sql );
+            return $stm->execute( array (
+                                    ":text" => $newCom->comment_text,
+                                    ":user" => $newCom->user,
+                                    ":id" => $newCom->comment_id
+            ) );
+	
 	
 	
 	}

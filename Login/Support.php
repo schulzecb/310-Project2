@@ -62,11 +62,14 @@ function userHashByName($users, $uname) {
 }
 
 function isAdmin($user) {
-    if($user->type == "admin") {
+    if (isset($_SESSION['userName']) && $_SESSION['userName'] == "Guest") {
+        return false;
+    }
+    else if($user->type == "admin") {
         return true;
     }
-    
-    return false;
+    else
+        return false;
 
 }
 ?>

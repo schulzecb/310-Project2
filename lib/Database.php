@@ -23,6 +23,19 @@ class Database extends PDO {
   		return $this->query($sql);
 		
 	}
+	
+	function getCartItems() {
+            $cartItems = array();
+            
+            $sql = "SELECT * FROM shopingCart";
+            $result = $this->query($sql);
+            
+            foreach ($result as $row) {
+                $cartItems[] = $row['ingredient_name'];
+            }
+            
+            return $cartItems;
+        }
 	/**
 	 * Functions needed for the search example *
 	 */

@@ -2,7 +2,7 @@
     include './Control.php';
     require_once '../lib/ingredient.php';
     include './Support.php';
-    $pageTitle = 'display';
+    $pageTitle = 'Cart';
     include '../Header and Footer/Header.php';
     include '../Header and Footer/Nav.php';
 ?>
@@ -52,7 +52,7 @@
                     }?>
                     
                     <?php if ($db->cartIsEmpty()) : ?>
-                        <h3><p>You con't have anything in your cart!</p></h3>
+                        <h3><p>You don't have anything in your cart!</p></h3>
                     <?php else : ?>
                         <h3>
                             <a href="./submit.php">Submit!</a> 

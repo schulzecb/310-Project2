@@ -7,6 +7,9 @@ include './config.php';
 ?>
 
 <?php
+	if(!isset($config)){
+		require_once dirname(__FILE__) . "/../lib/config.php";
+	}
     $max_file_size = 1000000;
     //grab name of ingredient from GET    
     //connect to database
@@ -25,19 +28,28 @@ if ($_FILES && isset ( $_FILES ["image"] )) {
 				$error_msg = "Unknown file type";
 			} else {
 				// Let database save assign unique integer id.
-				
-				$fid = $db->saveImage ( $_FILES ["image"], $ext );
-				if ($fid == - 1) {
-					$error_msg = "Unable to store image in DB";
-				} else {
-					if (! file_exists ( $config->upload_dir )) {
-						if (! mkdir ( $config->upload_dir )) {
-							$error_msg = "Attempt to make folder: \"" . $config->upload_dir . "\" failed";
-						}
-					}
-					$filename = str_pad ( $fid, $config->pad_length, "0", STR_PAD_LEFT ) . "." . $ext;
-					move_uploaded_file ( $_FILES ["image"] ["tmp_name"], $config->upload_dir . $filename );
-				}
+				//fix the if statement
+				if(isset($_POST['name'])){
+                                    $_SESSION['descript'] =  $_POST['description'];
+                                    $_SESSION['Ingname'] = $_POST['name'];
+                                    $fid = $db->saveImage ( $_FILES ["image"], $ext );
+                                    if ($fid == - 1) {
+                                            $error_msg = "Unable to store image in DB";
+                                    } else {
+                                            
+                                            $filename = str_pad ( $fid, $config->pad_length, "0", STR_PAD_LEFT ) . "." . $ext;
+                                            if (move_uploaded_file ( $_FILES ["image"] ["tmp_name"], './uploads' . $filename )){
+                                                chmod("./uploads".$filename, 0777);
+                                                $_SESSION['currentFile'] = "./uploads".$filename;
+                                                include "add.php";
+                                                
+                                            }
+                                            
+                                    }
+                                }
+                                else{
+                                    echo "please enter your ingredients name";
+                                }
 			}
 		}
 	} else if ($_FILES ["image"] ["error"] == UPLOAD_ERR_INI_SIZE || $_FILES ["image"] ["error"] == UPLOAD_ERR_FORM_SIZE) {
@@ -61,10 +73,10 @@ if ($_FILES && isset ( $_FILES ["image"] )) {
 				</div>
                                 <br>
                                 <br>
-				<input type="text" name="name" id="image" />
+				<input type="text" name="name" id="image" placeholder="name..." />
                                 <br>
                                 <br>
-				<input type="text" name="descript" id="image" />
+				<textarea class="form-control" rows="3" placeholder="Write description..." name="description"></textarea>
 				<br>
                                 <button type="submit" class="btn btn-default">
 					<span class="glyphicon glyphicon-upload" aria-label="Upload"></span>

@@ -14,7 +14,7 @@
                     <h1>Jake</h1><br>
                     <a href="https://www.cs.colostate.edu/~jcollera/"><img class = "img-aboutus center-block" alt="Jake Picture"></a><br>
                     <div class="about-text katie-text">
-                        <p>Things about Jake are gonna go here.</p>
+                        <p>Jake Colleran is a junior and Colorado State University and is from Parker Colorado. He is studing Applied Computing Technology and enjoys programming, hanging out with friends and anything to do with sports.</p>
                     </div>
                 </div>
             

@@ -21,9 +21,18 @@
     
     }
     
+    //drop table once order has been submitted
+    include_once '../lib/Database.php';
+    $db = new Database();
+    $db->deleteCart();
     
+?>
+<div class="container-fluid lemongrass-container">
+ <div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
+    <div class="col-md-8 content">
+        <p><?php echo "Order Submited! Your receipt has been sent via email."; ?></p>
+    </div>
+<div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
+</div>
 
-    echo "Order Submited! Your recipt has been sent via email.";
-
-
-include '../Header and Footer/Footer.php'; ?>
+<?php include '../Header and Footer/Footer.php'; ?>

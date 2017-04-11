@@ -17,7 +17,7 @@
     }
     
     //CHANGE TO CUSTOMER
-    if(!isAdmin($user)) { ?>
+    if(!isCustomer($user)) { ?>
         <div class="container-fluid lemongrass-container">
             <div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
             <div class="col-md-8 content">

@@ -31,11 +31,11 @@
         <div class="col-md-2 hidden-sm hidden-xs sidebar"></div>
         <div class="col-md-8 content">
            <?php 
-           if (isCustomer($user)){
+           if (isAdmin($user)){
                 echo "Only customers may purchase items";
             }
-           else if (isAdmin($user)){
-                if ($_SESSION['control'] == 1){
+           else if (isCustomer($user)){
+                if (isset($_SESSION['control']) && $_SESSION['control'] == 1){
                     $cart = new ingredient();
                     $cart->ingredient_name = $_SESSION['lastestPage'];
                     $cart->image = $_SESSION['lastImg'];
@@ -50,12 +50,15 @@
                         <a class="btn default-btn" href="<?php echo "./shoppingDelete.php?id=$id"?>"> <span class="glyphicon glyphicon-remove" aria-label="Delete"></span> </a>
                             <?php echo $ing["ingredient_name"]; 
                     }?>
-                    <h3>
-                        <?php
-                        ?>
-                        <a href="./submit.php">Submit!</a> 
-                        
-                    </h3>
+                    
+                    <?php if ($db->cartIsEmpty()) : ?>
+                        <h3><p>You con't have anything in your cart!</p></h3>
+                    <?php else : ?>
+                        <h3>
+                            <a href="./submit.php">Submit!</a> 
+                        </h3>
+                    <?php endif; ?>
+                    
                     <?php
                 
             }

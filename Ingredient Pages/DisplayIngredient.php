@@ -37,7 +37,7 @@
             $_SESSION['lastImg'] = $img;
             ?>
             
-            <div class = "indredient_image"><img src= "<?php echo $img?>" style="width:304px;height:228px;" align="middle"></div>
+            <div class = "ingredient-image"><img src= "<?php echo $img?>" ></div>
             <div class="ingredient-text">
                 <p><?php echo $ingredient["description"];
                 $_SESSION['lastDesc']=$ingredient["description"];

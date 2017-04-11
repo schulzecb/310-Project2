@@ -94,6 +94,18 @@ a:hover {
 }
 
 /* Content */
+
+.ingredient-image img{
+       
+        width: 304px;
+        height: 228px;
+        border-radius: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+    
+}
 .container-fluid{
 	margin: 0px;
 	padding: 0px;

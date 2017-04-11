@@ -117,6 +117,22 @@ class Database extends PDO {
 	
 	}
 	
+	function deleteCart() {
+           
+            $this->exec("DELETE FROM shopingCart");
+            
+	}
+	
+	function cartIsEmpty() {
+            $sql = "SELECT count(*) FROM shopingCart";
+            
+            $result = $this->query($sql);
+            $numItems = $result->fetchColumn();
+            
+            return ($numItems == 0);
+	
+	}
+	
 	function getCommentDetails($com_id) {
             
             $sql = "SELECT * FROM comments WHERE comment_id == '$com_id'";

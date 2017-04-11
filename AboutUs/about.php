@@ -12,9 +12,9 @@
             <div class="row-md-8">
                 <div class="col-md-6 katie-about">
                     <h1>Jake</h1><br>
-                    <a href="https://www.cs.colostate.edu/~jcollera/"><img class = "img-aboutus center-block" alt="Jake Picture"></a><br>
+                    <a href="https://www.cs.colostate.edu/~jcollera/"><img class = "img-aboutus center-block" src="./jakePicture.jpg" alt="Jake Picture"></a><br>
                     <div class="about-text katie-text">
-                        <p>Jake Colleran is a junior and Colorado State University and is from Parker Colorado. He is studing Applied Computing Technology and enjoys programming, hanging out with friends and anything to do with sports.</p>
+                        <p>Jake Colleran is a junior at Colorado State University and is from Parker, Colorado. He is studing Applied Computing Technology and enjoys programming, hanging out with friends and anything to do with sports.</p>
                     </div>
                 </div>
             

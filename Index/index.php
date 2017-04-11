@@ -6,6 +6,7 @@
 ?>
 
 	<?php
+	$_SESSION['control'] = 0;
 		include "../Header and Footer/Nav.php";
 	?>
 	<div class="container-fluid">
@@ -15,6 +16,7 @@
 	
 	
         <?php
+        $_SESSION['prevURL'] = $_SERVER['REQUEST_URI'];
             //display ingredients in database
             require_once '../lib/Database.php';
             $db = new Database();
@@ -28,7 +30,8 @@
                        <?php echo $ing["ingredient_name"];?>
                        </a>
                     </h3>
-                        <img style="height: 200px; width: 200px; margin-bottom: 5px;" alt="<?php echo $ing["ingredient_name"];?>" />
+                    <?php $img = "../Ingredient Pages/".$ing["image"];?>
+                        <img src= "<?php echo $img?>" style="height: 200px; width: 200px; margin-bottom: 5px;" alt="<?php echo $ing["ingredient_name"];?>" />
                     </div>
 		</div>
             <?php }; ?>	

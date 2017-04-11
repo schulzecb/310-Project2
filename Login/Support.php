@@ -22,6 +22,9 @@ function setupDefaultUsers() {
 	$users [$i ++] = makeNewUser ( 'cschulze', '$2a$10$BJVO4nnxUVbBeQy4Cy0KpuRevFLeTcjOatFWYKFJhAYVvD5DSGKLS', 'admin', 'cschulze@colostate.edu' );
 	$users [$i ++] = makeNewUser ( 'jcollera', '$2a$10$JI9LAwNZirkUaCVhg3nGKOzkyFWXqKOD4Ebo9ImEFuC2u0w0ts9eC', 'admin', 'jakecollera@hotmail.com' );
 	$users [$i ++] = makeNewUser ( 'testAccount', '$2a$10$JDIlTACGE/yyJCo/1CkYp.LRp8MdfklYUiktJzxTCwSuHTYznw9GS', 'customer', 'schulzecb@gmail.com'); /*test account - password is: testing123*/
+	//ct310 accounts
+	$users [$i ++] = makeNewUser ( 'ct310', '$2a$10$AoWRyJ/EvpnVfchrezeTKuzJBYBomjiG3AszuFw2mvWAvJf2APojO', 'admin', 'ct310@cs.colostate.edu'); //Password: A835E0
+	$users [$i ++] = makeNewUser ( 'fred', '$2a$10$Y76zJIpHLeX0QebDWcdxRuFiJJSnMzuco1l.okkSPtdh.t6dRvE.2', 'customer', 'ct310@cs.colostate.edu'); //Password: 3B23E6
 	writeUsers ( $users );
 }
 function writeUsers($users) {
@@ -66,6 +69,18 @@ function isAdmin($user) {
         return false;
     }
     else if($user->type == "admin") {
+        return true;
+    }
+    else
+        return false;
+
+}
+
+function isCustomer($user) {
+    if (isset($_SESSION['userName']) && $_SESSION['userName'] == "Guest") {
+        return false;
+    }
+    else if($user->type == "customer") {
         return true;
     }
     else

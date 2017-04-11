@@ -2,6 +2,7 @@
 
         <!-- Add comment to database -->
         <?php 
+        
             if (isset($_POST['message'])) {
                 $id = $db->getNextCommentID();
                 $ing_id = $ingredient["ingredient_id"];
@@ -17,7 +18,6 @@
             }
         
         ?>
-        
         
             
         <!--Display comments-->
@@ -47,6 +47,7 @@
 	<p><a href="../Login/Login.php">Sign in</a> to comment</p>
 <?php else: ?>
 	<form action="#" method="post">
+
 		<textarea class="form-control" rows="3" placeholder="Write your comment..." name="message"></textarea>
 		<?php echo '<button class="btn btn-default" role="button" type="submit" name="submit">Submit</button><span class="signed-in">Signed in as: ' . $_SESSION['userName'] . '</span>' ?>
 	</form>

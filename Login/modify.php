@@ -47,6 +47,7 @@
             <div class="form-group">
                 <label class="col-sm-2 control-label" for="user">Username</label>
                 <div class="col-sm-2">
+                
                     <input type="text" class="form-control" name="user" id="user"
                             value="<?php echo $comment->user ?>" />
                 </div>

@@ -19,7 +19,10 @@ $pageTitle = "Create";
     <?php
     //will create tables if they don't exist
     createTableIngredient ();
-    createTableComments (); ?>
+    createImageTable();
+    createTableComments (); 
+    createTableCart();?>
+    
 					
     <?php 
     //load default ingredients into table if emtpy
@@ -68,6 +71,21 @@ function createTableComments() {
 
 function createTableIngredient() {
 	$sql = "CREATE TABLE IF NOT EXISTS ingredient (
+			   ingredient_id INTEGER PRIMARY KEY ASC, 
+			   ingredient_name varchar(50), 
+			   image varchar(50), 
+			   description varchar(500))";
+	createTableGeneric ( $sql );
+}
+
+function createImageTable() {
+	$sql = "CREATE TABLE IF NOT EXISTS images (id INTEGER PRIMARY KEY ASC, 
+			 name varchar(255), type varchar(50), size int(10), ext varchar(5))";
+	createTableGeneric ( $sql );
+}
+
+function createTableCart() {
+	$sql = "CREATE TABLE IF NOT EXISTS shopingCart (
 			   ingredient_id INTEGER PRIMARY KEY ASC, 
 			   ingredient_name varchar(50), 
 			   image varchar(50), 

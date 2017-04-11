@@ -17,6 +17,25 @@ class Database extends PDO {
   		return $this->query($sql);
 		
 	}
+	
+        function getCart() {
+                $sql = "SELECT * FROM shopingCart";
+  		return $this->query($sql);
+		
+	}
+	
+	function getCartItems() {
+            $cartItems = array();
+            
+            $sql = "SELECT * FROM shopingCart";
+            $result = $this->query($sql);
+            
+            foreach ($result as $row) {
+                $cartItems[] = $row['ingredient_name'];
+            }
+            
+            return $cartItems;
+        }
 	/**
 	 * Functions needed for the search example *
 	 */
@@ -60,6 +79,19 @@ class Database extends PDO {
 	
 	}
 	
+        function deleteItem($comment) {
+            
+            $sql = "DELETE FROM shopingCart WHERE ingredient_id == '$comment'";
+            if ($this->exec ( $sql ) === FALSE) {
+			echo '<pre class="bg-danger">';
+			print_r ( $this->errorInfo () );
+			echo '</pre>';
+			return FALSE;
+		}
+		return TRUE;
+	
+	}
+	
 	function getNextCommentID() {
                 $sql = "SELECT count(*) FROM comments";
                 $result = $this->query($sql);
@@ -78,6 +110,39 @@ class Database extends PDO {
                                         ":ing_id" => $newComment->ingredient_id
                 ) );
 	
+	
+	}
+
+	
+        function insertCart($Item) {
+                $sql = 	$sql_ingredient = "INSERT INTO shopingCart (ingredient_name, image, description)
+									 VALUES (:ingredient_name, :image, :description)";
+									 
+                
+                $stm = $this->prepare( $sql );
+                return $stm->execute( array (
+                            ":ingredient_name" => $Item->ingredient_name,
+                            ":image" => $Item->image,
+                            ":description" => $Item->description,
+                ) )
+                ;
+	
+	
+	}
+	
+	function deleteCart() {
+           
+            $this->exec("DELETE FROM shopingCart");
+            
+	}
+	
+	function cartIsEmpty() {
+            $sql = "SELECT count(*) FROM shopingCart";
+            
+            $result = $this->query($sql);
+            $numItems = $result->fetchColumn();
+            
+            return ($numItems == 0);
 	
 	}
 	
@@ -104,6 +169,24 @@ class Database extends PDO {
 	
 	
 	
+	}
+	
+        public function saveImage($imgArray, $ext){
+        
+		$sql = "INSERT INTO images (name, type, size, ext) VALUES (?,?,?,?)";
+		$stm = $this->prepare($sql);
+		echo $imgArray["size"];
+		$values = array(
+			$imgArray["name"],
+			$imgArray["type"],
+			$imgArray["size"],
+			$ext		
+		);
+		if($stm->execute($values) === FALSE){
+			return -1;
+		}else{
+			return $this->lastInsertId("id");
+		}
 	}
 	
 	

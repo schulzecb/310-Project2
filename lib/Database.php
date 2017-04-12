@@ -23,19 +23,6 @@ class Database extends PDO {
   		return $this->query($sql);
 		
 	}
-	
-	function getCartItems() {
-            $cartItems = array();
-            
-            $sql = "SELECT * FROM shopingCart";
-            $result = $this->query($sql);
-            
-            foreach ($result as $row) {
-                $cartItems[] = $row['ingredient_name'];
-            }
-            
-            return $cartItems;
-        }
 	/**
 	 * Functions needed for the search example *
 	 */
@@ -130,19 +117,17 @@ class Database extends PDO {
 	
 	}
 	
-	function deleteCart() {
-           
-            $this->exec("DELETE FROM shopingCart");
-            
-	}
+	function insertIngedient($Item) {
+                $sql = 	$sql_ingredient = "INSERT INTO ingredient (ingredient_name, image, description)
+									 VALUES (:ingredient_name, :image, :description)";     
+                $stm = $this->prepare( $sql );
+                return $stm->execute( array (
+                            ":ingredient_name" => $Item->ingredient_name,
+                            ":image" => $Item->image,
+                            ":description" => $Item->description,
+                ) )
+                ;
 	
-	function cartIsEmpty() {
-            $sql = "SELECT count(*) FROM shopingCart";
-            
-            $result = $this->query($sql);
-            $numItems = $result->fetchColumn();
-            
-            return ($numItems == 0);
 	
 	}
 	
@@ -175,7 +160,6 @@ class Database extends PDO {
         
 		$sql = "INSERT INTO images (name, type, size, ext) VALUES (?,?,?,?)";
 		$stm = $this->prepare($sql);
-		echo $imgArray["size"];
 		$values = array(
 			$imgArray["name"],
 			$imgArray["type"],

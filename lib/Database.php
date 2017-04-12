@@ -117,6 +117,12 @@ class Database extends PDO {
 	
 	}
 	
+	function deleteCart() {
+           
+            $this->exec("DELETE FROM shopingCart");
+            
+	}
+	
 	function insertIngedient($Item) {
                 $sql = 	$sql_ingredient = "INSERT INTO ingredient (ingredient_name, image, description)
 									 VALUES (:ingredient_name, :image, :description)";     

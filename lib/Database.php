@@ -123,6 +123,16 @@ class Database extends PDO {
             
 	}
 	
+	function cartIsEmpty() {
+            $sql = "SELECT count(*) FROM shopingCart";
+            
+            $result = $this->query($sql);
+            $numItems = $result->fetchColumn();
+            
+            return ($numItems == 0);
+	
+	}
+	
 	function insertIngedient($Item) {
                 $sql = 	$sql_ingredient = "INSERT INTO ingredient (ingredient_name, image, description)
 									 VALUES (:ingredient_name, :image, :description)";     
